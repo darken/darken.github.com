@@ -1,12 +1,12 @@
-.bd-sidebar {
+.sidebar {
   order: 0;
 }
 
 @media (min-width: 768px) {
-  .bd-sidebar {
+  .sidebar {
   }
   @supports (position: sticky) {
-    .bd-sidebar {
+    .sidebar {
       position: sticky;
       top: 4rem;
       z-index: 1000;
@@ -17,9 +17,15 @@
 }
 
 @media (min-width: 1200px) {
-  .bd-sidebar {
+  .sidebar {
     flex: 0 1 320px;
   }
+}
+
+.m-photo {
+  width: 195px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .card {
@@ -45,6 +51,8 @@
   max-height: 100%;
   max-width: 100%;
 }
+
+/* Text */
 
 body {
   padding:50px;

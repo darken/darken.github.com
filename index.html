@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>Gustavo Rodríguez</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheets/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -15,7 +15,10 @@
 <body>
   <div class="content-fluid">
     <div class="row flex-xl-nowrap">
-      <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+      <div class="col-12 col-md-3 col-xl-2 sidebar">
+        <div class="img-fluid">
+          <img class="border rounded m-photo" src="https://www.gravatar.com/avatar/566213e64507df6112e1cae9538e0357?s=200">
+        </div>
         <h1>Gustavo Rodríguez</h1>
         <p>
           <a href="mailto:gusdev@protonmail.com">gusdev@protonmail.com</a><br>
@@ -25,27 +28,33 @@
       </div>
 
       <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-        <h3>Professional profile</h3>
+        <select class="form-control form-control-sm float-right col-md-2" id="localeSelect" onchange="changeLocale()" style="margin-bottom: 10px;">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
 
-        <p>Colombian software developer, graduated from the Universidad Distrital as a Systems Engineer on 2009.
-          <br>Programming skills in Java, Javascript, Objective-C, C#, Sql, Html and Css.
-          <br>Sun Certified Programmer for the Java Platform SE6, 2009.
+        <h3 id="proProfileTitle">Professional profile</h3>
+
+        <p id="proProfileContent" style="white-space: pre-line;">Colombian software developer, graduated from the Universidad Distrital as a Systems Engineer on 2009.
+          Six years of professional experience developing enterprise applications.
+          Programming skills in Java, Javascript, Objective-C, C#, Sql, Html and Css.
+          Sun Certified Programmer for the Java Platform SE6, 2009.
         </p>
 
         <p></p>
 
-        <h3>Work samples</h3>
+        <h3 id="opTitle">My own proyects</h3>
 
-        <!-- Dailist Card -->
+        <!-- Dailyst Card -->
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><img src="assets/img/dailyst/icon.png" alt="Dailyst" class="float-right"> Dailyst</h5>
-            <p class="card-text">Android app to track the daily performance of tasks and routines.</p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseDailyst" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <p id="op01Description" class="card-text">Mobile app to track the daily performance of tasks and routines.</p>
+            <button class="lc_opMoreButton btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDailyst" aria-expanded="false" aria-controls="collapseDailyst">
               More...
-            </a>
+            </button>
             <div class="collapse more" id="collapseDailyst">
-              Download for <a href="https://www.dropbox.com/s/v6uokgscgxj9l2b/Dailyst%200.2.1.apk?dl=0">Android (APK)</a>
+              <span class="lc_opDownloadFor">Download for</span> <a href="https://www.dropbox.com/s/v6uokgscgxj9l2b/Dailyst%200.2.1.apk?dl=0">Android (APK)</a>
               <br><br>
 
               <div id="carouselDailyst" class="carousel slide center" data-ride="carousel">
@@ -90,28 +99,28 @@
             </div>
           </div>
         </div>
-        <!-- /Dailist Card -->
+        <!-- /Dailyst Card -->
 
         <!-- UnityGame Card -->
         <div class="card">
           <div class="card-body">
             <h5 class="card-title"><img src="assets/img/duavity/icon.png" alt="Duavity" class="float-right"> Duavity</h5>
-            <p class="card-text">Platformer with a twist. Made with Unity.</p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapse02" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <p id="op02Description" class="card-text">Platformer with a twist. Made with Unity.</p>
+            <button class="lc_opMoreButton btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDuavity" aria-expanded="false" aria-controls="collapseDuavity">
               More...
-            </a>
-            <div class="collapse more" id="collapse02">
-              Download for <a href="#">Android</a> or <a href="#">Windows</a>
+            </button>
+            <div class="collapse more" id="collapseDuavity">
+              <span class="lc_opDownloadFor">Download for</span> <a href="#">Android</a> <span class="lc_or">or</span> <a href="#">Windows</a>
               <br><br>
 
-              <div id="carousel02" class="carousel slide center d-none" data-ride="carousel">
+              <div id="carouselDuavity" class="carousel slide center d-none" data-ride="carousel">
                 <ol class="carousel-indicators">
-                  <li data-target="#carousel02" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel02" data-slide-to="1"></li>
-                  <li data-target="#carousel02" data-slide-to="2"></li>
-                  <li data-target="#carousel02" data-slide-to="3"></li>
-                  <li data-target="#carousel02" data-slide-to="4"></li>
-                  <li data-target="#carousel02" data-slide-to="5"></li>
+                  <li data-target="#carouselDuavity" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselDuavity" data-slide-to="1"></li>
+                  <li data-target="#carouselDuavity" data-slide-to="2"></li>
+                  <li data-target="#carouselDuavity" data-slide-to="3"></li>
+                  <li data-target="#carouselDuavity" data-slide-to="4"></li>
+                  <li data-target="#carouselDuavity" data-slide-to="5"></li>
                 </ol>
                 <div class="carousel-inner rounded" >
                   <div class="carousel-item active">
@@ -133,11 +142,11 @@
                     <img class="d-block" src="assets/img/duavity/006.png" alt="">
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carousel02" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselDuavity" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carousel02" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselDuavity" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
@@ -150,13 +159,18 @@
 
       </main>
       <footer>
-        <p><small>Hosted on GitHub Pages.</a></small></p>
+        <p><small><span id="hostedOn">Hosted on</span> <a href="https://github.com/darken/darken.github.com">GitHub Pages.</a></small></p>
       </footer>
     </div>
   </div>
 
   <script src="javascripts/scale.fix.js"></script>
+  <script src="javascripts/l10n.min.js"></script>
+  <script src="javascripts/localizations.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="javascripts/localizer.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
