@@ -41,8 +41,15 @@
 }
 
 .carousel {
-  max-height: 640px;
   max-width: 360px;
+  max-height: 640px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-wide {
+  max-width: 640px;
+  max-height: 360px;
   margin-left: auto;
   margin-right: auto;
 }
