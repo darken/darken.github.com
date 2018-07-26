@@ -36,12 +36,14 @@ var changeLocale;
       "opTitle",
       "op01Description",
       "op02Description",
+      "op03Description",
       "hostedOn"
     );
 
     localizeByClass(
       "opMoreButton",
       "opDownloadFor",
+      "opDownload",
       "or"
     );
 
