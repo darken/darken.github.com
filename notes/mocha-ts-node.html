@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test TS code using mocha</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="/stylesheets/notes.css">
+</head>
+<body>
+
+<main class="container">
+    <h3>Test TS code using mocha</h3>
+
+    <section class="commands">
+        npm install mocha --save-dev
+        npm install @types/mocha --save-dev
+        npm install ts-node --save-dev
+    </section>
+
+    <article class="code">
+        <header>package.json</header>
+        <p>
+        {
+            ...
+            "mocha": {
+            "extension": ["ts"],
+            "spec": "test/**/*.ts",
+            "require": "ts-node/register"
+            }
+        }
+        </p>
+    </article>
+
+    <article class="code">
+        <header>tsconfig.json</header>
+        <p>
+        {
+            ...
+            "include": ["src", "test"],
+            "ts-node": {
+                "files": true
+            }
+        }
+        </p>
+    </article>
+
+</main>
+
+<footer class="container">
+    <small>
+        <span id="hostedOn">Hosted on</span> <a href="https://github.com/darken/darken.github.com">GitHub Pages.</a>
+    </small>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.commands {
+    white-space: pre;
+}
+
+article.code {
+    padding-bottom: 0;
+}
+
+article.code header {
+    margin-bottom: 0;
+}
+
+article.code p {
+    white-space: pre;
+}

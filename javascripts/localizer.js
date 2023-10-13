@@ -13,47 +13,30 @@ var changeLocale;
   }
 
   function localizeByIds() {
-    var id;
-    for (i = 0; i < arguments.length; i++) {
-      id = arguments[i];
+    for (let i = 0; i < arguments.length; i++) {
+      let id = arguments[i];
       localizeSel("%" + id, "#" + id);
     }
   }
 
   function localizeByClass() {
-    for (i = 0; i < arguments.length; i++) {
-      id = arguments[i];
+    for (let i = 0; i < arguments.length; i++) {
+      let id = arguments[i];
       localizeSel("%" + id, ".lc_" + id);
     }
   }
 
   function localizeAll () {
-    var proProfileContent = document.getElementById("proProfileContent").childNodes;
-
     localizeByIds(
       "proProfileTitle",
       "proProfileContent",
-      "opTitle",
-      "op01Description",
-      "op02Description",
-      "op03Description",
+      "notesTitle",
       "hostedOn"
     );
-
-    localizeByClass(
-      "opMoreButton",
-      "opDownloadFor",
-      "opDownload",
-      "or"
-    );
-
-    //$("#proProfileContent").text(localize("%proProfileContent", $("#proProfileContent").text()));
-    //$("#proProfileContent:nth-child(2)").text(localize("%proProfileContent_1", proProfileContent[1].nodeValue));
-    //$("#proProfileContent:nth-child(4)").text(localize("%proProfileContent_2", proProfileContent[2].nodeValue));
   }
 
   changeLocale = function () {
-    var selectedLocale = $("#localeSelect").val();
+    let  selectedLocale = $("#localeSelect").val();
     if (String.locale === selectedLocale) return;
 
     String.locale = selectedLocale;
